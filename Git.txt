@@ -1,0 +1,184 @@
+
+para limpiar el terminal usamos clear o ctr + l 
+
+VCS TRADUCE: Version Control System 
+
+Git es una herramienta que rastrea los cambios en el codigo de fuente,ese es el sistema de control de versiones raliza un seguimiento de los cambios en cualquier archivo ,pero se usa principalmente para archivos de codigos de fuente 
+
+PONER UN PROYECTO EN GIT 
+
+uno puede utilizar git incluso con una interfas grafica , como por ejemplo la de visual studiuo code
+
+". "siempre se va signifiacar el directorio donde nos encontramos
+
+siempre debemos agragar un commit para que nos deje avanzar , 
+
+- la unica diferencia para cambiar entre ramas y commits es que en comitts ejecutamos el comando "git log" para optener el codigo el cual tiene el commit y luego "git checkout seguido del codigo"
+
+EL Control de versiones nos brinda un historial detallado de un proyecto "git log nos muestra el detalle del historial de todo lo que se ha hecho en el proyecto "
+
+*Podemos usar la contraparte que se llama merge  , que nos sirve para unificar las ramas , pero que pasaria si hay que confirmar en las dos ramas las dos confirmaciones que canbiaron , exactamente la misma linea de codigo , pero de diferentes maneras, aqui ya hay un conflicto
+
+COMPARTIR CODIGO ENTRE DESARROLLADORES
+
+si es dificil haganlo con mas frecuencia ,
+
+-GIT ES RAPIDO
+
+-es bastante inteligente, ak momento de hacer cambios en algun documento , nos confirma que se realizo el cambio 
+
+-GIt es seguro.
+
+CONTROL DE VERSIONES DEL SERVIDOR CLIENTE 
+
+La subversion es uno muy popular, que se maneja desde el cerver , donde puede copiar el proyecto y tenerlo en su computador ,al momento de tener losarchivos en su computadora , puede que algun archivo tenga conflicto, se puede presentar que otro compañero suba al servidor el archivo modificado que tenia el conflicto, en este caso hay que volver a descargar el proyecto , y unificar ambos proyectos y ahi si subirlo al servidor . Para que no se presente ningun coflicto
+
+CONTROL DE VERSIONES DISTRIBUIDO 
+
+Git clone, clona un repositorio 
+
+podemos usar git con una interfaz grafica como Visual Studio Code , entre otros 
+
+- hay servidores como github- gitlab-Bitbucket
+
+GITHUB
+
+*Hay tres etapas que son 
+
+-COMMITED: CONFIRMADO
+
+-MODIFIED: MODIFICADO DESDE LA ULTIMA VERSIO 
+
+-STAGED: TOMA LA MODIFICACION , Y LOS CONFIRMA EN SU BASE DE DATOS LOCAL
+
+*TAMBIEN HAY TRES PARTES PRINCIPALES
+
+-Directorio dot Git: conocido como repositorios , este es el origen de los datos del proyecto , que se esta almacenando en la computadora local 
+
+.Directorio de Trabajo: esto es una copia unica , desproteccion de una version del proyecto, se extraen de la base de datos comprimida local 
+
+COMANDO PARA APRENDER 
+
+-EL PRIMERO ES EL "PWD" SIGNIFICA DIRECTORIO DE TRABAJO DE IMPRESIÓN 
+
+Solo devuelve la direccion actual de la ruta de la carpeta
+
+-"CD " Cambio de directorio 
+
+-"LS" Listados de directorios 
+
+-"MKDIR" Nueva carpeta vacia 
+
+-"TOUCH"
+
+INSTALACION DE GIT 
+
+DEBIAN : sudo apt-get install git 
+
+CONFIGURACION NOMBRE Y CORREO ELECTRONICO
+
+-git config  - - global [user.name](http://user.name) "Juan David M"
+
+-git config  - - global [user.](http://user.name)email "juandavidds08@gmail.com"
+
+SI DESEA VERIFICAR SUS AJUSTES DE CONFIGURACION , SE PUEDE HACER DE LA SIGUIENTE MANERA , y se mostrara una lista de todos los ajustes que se tienen
+
+-git config - - list
+
+PARA  SABER EL NOMBRE DE USUARIO SIMPLEMENTE USAMOS Y ASI LO MISMO CON EL EMAIL 
+
+-git config user.name
+
+PARA ACCEDER AL MAN DE GIT LO PODEMOS HACER DE LA SIGUIENTE MANERA 
+
+- man git 
+
+-git help config
+
+*CADA PROYECTO EN GIT SE DENOMINA REPOSITORIO
+
+Cuando se crea un repositorio , automaticamente se crea una carpeta llamada .git podemos acceder a ella de la siguiente manera
+
+-cd.git
+
+-LS -L Para mirar los archivos en esta carpeta
+
+para que nos lleve al derectorio anterior lo podemos hacer de la siguiente manera 
+
+-cd ..
+
+AL MOMENTO DE SUBIR UN REPOSITORIO SE RECOMIENDO UTILIZAR LA OPCION SSH, YA QUE SOLICITA UN PAR DE CLAVES PARA MAS INFORMACION SE PUEDE ENCONTRAR EN LA SIGUIENTE PAGINA
+
+https://help.github.com/articles/which-remote-url-should-i-use
+
+SUBIENDO EL REPPOSITORIO
+
+-echo "#nombre del repositorio ">> README.md
+
+-git add.
+
+-git remote add origgin "link que nos propociona github "
+
+-git commit -m " se subio el primer repositorio"
+
+-git push -u origin master 
+
+COMANDO BASICOS DE GIT COTIDIANOS 
+
+hay que tener en cuenta en el momento que iniciamos git , el mismo sitema nos crea la rama master 
+
+-git status : nos muestra el estodo , y si hay que agregar cambios
+
+ETAPAS DE ARCHIVO 
+
+Cuando realizamos un cambio en nuestro archivo comprometido o modificado , pasa de una etapa comprometida a modificada, cuando estamos seguros de nuestros cambios pasa a el area de preparacion , luego los enviamos nuevamente a nuesro repositorio , y ahora se gurdan en nuestro repositorio en primera instancia 
+
+para crear un archivo  debemos hacer lo siguiente desde la terminal 
+
+-touch prueba.txt nombre del archivo 
+
+despues de esto debemos hacerle seguimiento al archivo 
+
+-git add .
+
+el archivo se encuentra en proceso de confirmacion ya sea para ser eliminado o agregado 
+
+ARCHIVOS MODIFICADOS POR ESCENARIO
+
+con el comando ls -l , podemos ver los archivos que tenemos actualmente en nuestro repositorio
+
+con el comando 
+
+-editor de archivo seguido del documento 
+
+Para optener un status mas corto esto nos sirve para mirar como se encuentra el archivo   hacemos lo siguiente:
+
+-git status -s
+
+cuando se modifica un archivo y miramos status de esta forma aparecera con dos opciones 
+
+A: archivo que se a agredado al area de preparacion 
+
+M : modificado 
+
+Aca es donde debemos saber que significan las letras y en que estado se encuentran 
+
+GIT DIFF
+
+git diff - - staged 
+
+Este comando sirve para ver los cambios reales que se ha realizado en el documento 
+
+lo que esta dentro 
+
+@@ -1 +1,2 @@  aca nos muestra unos numeros , nos enfocamos en los positvos que quieren decir donde se encuentran los archivos en que linea , en este caso en la 1, 2. 
+
+git commit -a -m "nombre del commit"
+
+`git reset  - - soft`  me va a llevar a ese ito
+
+`git branch`  nombre de nuestra rama
+
+`git reset - - mixed` esto lo que va hacer es ir a un punto de la
+historia,
+
