@@ -214,5 +214,12 @@ INTRODUCCION A LAS SUCURSALES
 
 git checkout -b nombre de la rama  : crear una nueva rama y pasar a esa rama 
 
-TRABAJAR CON SUCURSALES 
+
+UNIR 
+
+Para unir ramas lo hacemos con el siguinte comando 
+
+git merge nombre de la rama a la que se quiere unir 
+
+
 
