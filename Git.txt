@@ -199,3 +199,20 @@ y confirmacion , es similar con lo que optuvimos con el comando git "diff" , mos
 el documento 
 
 CONFITMAR MENSAJES 
+en este link podremos encontrar lo mas importante con respecto a confirmar mensajes y sus 
+reglas : https://chris.beams.io/posts/git-commit/
+
+ELIMINAR Y MOVER ARCHIVOS 
+-git rm : y el nombre del arvhivo para eliminar 
+-git status : nos va a mostrar que se elimino el archivo 
+
+podemos hacer que el archivo cambie de nombre de la siguiente manera 
+
+-git mv nombre del archivo - nuevo nombre
+
+INTRODUCCION A LAS SUCURSALES 
+
+git checkout -b nombre de la rama  : crear una nueva rama y pasar a esa rama 
+
+TRABAJAR CON SUCURSALES 
+
