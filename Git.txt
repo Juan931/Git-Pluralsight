@@ -184,3 +184,18 @@ historia,
 
 EMPUJA A UN ORIGEN REMOTO
 
+con commit subimos y confimamos los archivos 
+
+
+git log  nos muestra el historial , y confirmaciones existentes
+
+git log -1 : nos muestra el nombre del primer commit , si empre se va a mostrar el orden 
+cronologico de forma inversa
+git log --oneline: si quieremos ver todo de una forma mas simplificada , texto modificado en orden 
+
+git log --stat: nos muesta cada archivo y confirmacion
+git log --patch: nos dara la definicion completa de los cambios exactos con cada archivo 
+y confirmacion , es similar con lo que optuvimos con el comando git "diff" , mostandome todo 
+el documento 
+
+CONFITMAR MENSAJES 
