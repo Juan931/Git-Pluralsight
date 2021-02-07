@@ -182,3 +182,5 @@ git commit -a -m "nombre del commit"
 `git reset - - mixed` esto lo que va hacer es ir a un punto de la
 historia,
 
+EMPUJA A UN ORIGEN REMOTO
+
